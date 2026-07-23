@@ -1,0 +1,232 @@
+aid: aib-group-uk
+url: https://raw.githubusercontent.com/api-evangelist/aib-group-uk/refs/heads/main/apis.yml
+name: AIB Group (UK)
+kind: company
+description: AIB Group (UK) p.l.c. is a UK bank incorporated in Northern Ireland
+  (registered number NI018800, registered office 92 Ann Street, Belfast BT1 3HH),
+  authorised by the Prudential Regulation Authority and regulated by the Financial
+  Conduct Authority and the Prudential Regulation Authority. It trades as Allied
+  Irish Bank (GB) and Allied Irish Bank (GB) Savings Direct, and is the UK banking
+  subsidiary of the Irish AIB Group plc. As one of the CMA9 banks mandated under
+  the UK Competition and Markets Authority's Open Banking order, it runs a public
+  developer portal publishing UK Open Banking APIs conformant to the Open Banking
+  Implementation Entity (OBIE) standards - a public, unauthenticated Open Data API
+  (v2.2) exposing personal current account, business current account, and unsecured
+  SME loan product reference data, alongside the FAPI-secured Read/Write family
+  (Account and Transaction Information, Payment Initiation, Confirmation of Funds,
+  and Variable Recurring Payments to OBIE v4.0) accessed under OAuth2/OIDC consent
+  with PSD2 strong customer authentication, dynamic client registration, and a
+  sandbox for onboarding and testing before production.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-23'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Open Banking
+- PSD2
+- OBIE
+- CMA9
+- United Kingdom
+- Payments
+- Account Information
+- Confirmation of Funds
+- Northern Ireland
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: aib-group-uk:aib-group-uk-open-data-api
+  name: AIB Group (UK) Open Data API
+  description: Public, unauthenticated Open Banking Open Data API (v2.2) publishing
+    Allied Irish Bank (GB) product reference data - personal current accounts,
+    business current accounts, and unsecured SME loans - conformant to the OBIE
+    Open Data standard. Confirmed live (HTTP 200, application/prs.openbanking.opendata.v2.2+json).
+  humanURL: https://developer.aibgb.co.uk/open-data-v2-2-gb/apis
+  baseURL: https://openapi.aibgb.co.uk/open-banking/v2.2
+  tags:
+  - Open Data
+  - Personal Current Accounts
+  - Business Current Accounts
+  - Unsecured SME Loans
+  properties:
+  - type: OpenAPI
+    url: openapi/aib-group-uk-open-data-openapi.json
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/open-data-v2-2-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-account-information-api
+  name: AIB Group (UK) Accounts Information API
+  description: OBIE Read/Write Account and Transaction Information API (AIS) v4.0 -
+    account details, balances, transactions, standing orders, direct debits, and
+    statements. FAPI-secured via OAuth2/OIDC consent with PSD2 strong customer
+    authentication; access is granted through developer-portal onboarding and a
+    sandbox.
+  humanURL: https://developer.aibgb.co.uk/accounts-information-v4-0-gb/apis
+  baseURL: ''
+  tags:
+  - Account Information
+  - AIS
+  - Read Write
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/accounts-information-v4-0-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-payment-initiation-api
+  name: AIB Group (UK) Payments Initiation API
+  description: OBIE Read/Write Payment Initiation API (PIS) v4.0 - domestic and
+    scheduled payment initiation through a set-up, submit-after-consent, and
+    status-retrieval flow. FAPI-secured via OAuth2/OIDC with PSD2 strong customer
+    authentication.
+  humanURL: https://developer.aibgb.co.uk/payments-initiation-v4-0-gb/apis
+  baseURL: ''
+  tags:
+  - Payment Initiation
+  - PIS
+  - Read Write
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/payments-initiation-v4-0-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-confirmation-of-funds-api
+  name: AIB Group (UK) Confirmation of Funds API
+  description: OBIE Read/Write Confirmation of Funds API (CBPII) v4.0 - returns a
+    yes/no confirmation of whether funds are available for a specified payment.
+    FAPI-secured via OAuth2/OIDC with PSD2 strong customer authentication.
+  humanURL: https://developer.aibgb.co.uk/confirmation-funds-v4-0-gb/apis
+  baseURL: ''
+  tags:
+  - Confirmation of Funds
+  - CBPII
+  - Read Write
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/confirmation-funds-v4-0-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-variable-recurring-payments-api
+  name: AIB Group (UK) Variable Recurring Payments API
+  description: OBIE Read/Write Variable Recurring Payments (VRP) API v4.0, including
+    sweeping, letting authorised TPPs initiate a series of payments under a single
+    long-lived consent. FAPI-secured via OAuth2/OIDC with PSD2 strong customer
+    authentication.
+  humanURL: https://developer.aibgb.co.uk/variable-recurring-payments-v4-0-gb/apis
+  baseURL: ''
+  tags:
+  - Variable Recurring Payments
+  - VRP
+  - Read Write
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/variable-recurring-payments-v4-0-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-dynamic-client-registration-api
+  name: AIB Group (UK) Dynamic Client Registration API
+  description: OBIE Dynamic Client Registration API v3.2, allowing authorised
+    third-party providers to programmatically register client credentials using
+    OBIE/eIDAS certificates before consuming the Read/Write APIs.
+  humanURL: https://developer.aibgb.co.uk/dynamic-client-registration-api-v3-2-gb/apis
+  baseURL: ''
+  tags:
+  - Dynamic Client Registration
+  - DCR
+  - Security
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/dynamic-client-registration-api-v3-2-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-credit-cards-information-api
+  name: AIB Group (UK) Credit Cards Information API
+  description: Credit Cards Information API providing access to credit card account
+    information under the Open Banking consent model.
+  humanURL: https://developer.aibgb.co.uk/credit-cards-information-gb/apis
+  baseURL: ''
+  tags:
+  - Credit Cards
+  - Account Information
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/credit-cards-information-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-event-notification-subscription-api
+  name: AIB Group (UK) Event Notification Subscription API
+  description: OBIE Event Notification Subscription API v4.0, letting TPPs manage
+    subscriptions to real-time event notifications (aggregated polling / callbacks)
+    for the Read/Write APIs.
+  humanURL: https://developer.aibgb.co.uk/event-notification-subscription-api-v4-0-gb/apis
+  baseURL: ''
+  tags:
+  - Event Notifications
+  - Read Write
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/event-notification-subscription-api-v4-0-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-aggregated-event-polling-api
+  name: AIB Group (UK) Aggregated Event Polling API
+  description: OBIE Aggregated Event Polling API v4.0, allowing TPPs to poll for
+    aggregated event notifications relating to Account Information and Payment
+    consents.
+  humanURL: https://developer.aibgb.co.uk/aggregated-event-polling-api-v4-0-gb/apis
+  baseURL: ''
+  tags:
+  - Event Polling
+  - Read Write
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/aggregated-event-polling-api-v4-0-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+- aid: aib-group-uk:aib-group-uk-fca-service-metrics-bca-api
+  name: AIB Group (UK) FCA Service Metrics (BCA) API
+  description: FCA Service Metrics API for Business Current Accounts (BCA),
+    publishing the service availability and performance metrics AIB Group (UK) is
+    required to report under FCA rules.
+  humanURL: https://developer.aibgb.co.uk/fca-service-metrics-bca-gb/apis
+  baseURL: ''
+  tags:
+  - FCA Service Metrics
+  - Business Current Accounts
+  - Compliance
+  properties:
+  - type: Documentation
+    url: https://developer.aibgb.co.uk/fca-service-metrics-bca-gb/apis
+  - type: APIReference
+    url: https://developer.aibgb.co.uk/apis
+common:
+- type: Website
+  url: https://www.aibgb.co.uk/
+- type: DeveloperPortal
+  url: https://developer.aibgb.co.uk/
+- type: Documentation
+  url: https://developer.aibgb.co.uk/apis
+- type: Support
+  url: https://developer.aibgb.co.uk/faq-page
+- type: TermsOfService
+  url: https://developer.aibgb.co.uk/site-legal-notice-gb
+- type: PrivacyPolicy
+  url: https://developer.aibgb.co.uk/developer-portal-privacy-statement-GB
+- type: Compliance
+  url: https://developer.aibgb.co.uk/fca-service-metrics-bca-gb/apis
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aib
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

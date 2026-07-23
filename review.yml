@@ -1,0 +1,107 @@
+aid: aib-group-uk
+name: AIB Group (UK)
+review:
+  question: Does AIB Group (UK) expose a live, confirmed public Open Banking Open
+    Data API, and how is its OBIE Read/Write family secured?
+  answer: true
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    AIB Group (UK) p.l.c. (trading as Allied Irish Bank (GB)) is one of the UK
+    CMA9 banks and runs a public developer portal at https://developer.aibgb.co.uk/
+    (HTTP 200) with a documented API catalogue. Its PUBLIC, UNAUTHENTICATED Open
+    Banking Open Data API is confirmed live: GET requests to
+    https://openapi.aibgb.co.uk/open-banking/v2.2/{personal-current-accounts,
+    business-current-accounts,unsecured-sme-loans} each returned HTTP 200 with
+    Content-Type application/prs.openbanking.opendata.v2.2+json and a valid OBIE
+    Open Data payload (meta.Agreement / Open Licence, data[].Brand[].BrandName
+    "Allied Irish Bank (GB)"). The ATM and branch endpoints under the same base
+    returned HTTP 400 (not served / parameters required) and v2.3 returned 404 -
+    this ASPSP publishes the account/loan Open Data resources but not ATM/branch
+    locator resources at this host. The portal additionally documents the OBIE
+    Read/Write family - Accounts Information v4.0 (AIS), Payments Initiation v4.0
+    (PIS), Confirmation of Funds v4.0 (CBPII), Variable Recurring Payments v4.0
+    (VRP incl. sweeping), plus Dynamic Client Registration v3.2, Credit Cards
+    Information, Event Notification Subscription v4.0, Aggregated Event Polling
+    v4.0, and FCA Service Metrics (BCA). These conform to Open Banking UK
+    Specification v4.0 and are FAPI-secured behind an OAuth2/OIDC consent
+    framework with PSD2 strong customer authentication; access requires
+    developer-portal onboarding, a sandbox, and OBIE/eIDAS certificates via
+    Dynamic Client Registration. No production base URL for the Read/Write APIs is
+    publicly published without onboarding, so those apis[] entries carry an empty
+    baseURL rather than a fabricated host.
+  entity:
+    legalName: AIB Group (UK) p.l.c.
+    tradingAs:
+      - Allied Irish Bank (GB)
+      - Allied Irish Bank (GB) Savings Direct
+    registration: NI018800 (incorporated in Northern Ireland)
+    registeredOffice: 92 Ann Street, Belfast BT1 3HH
+    regulators:
+      - Prudential Regulation Authority (authorised by)
+      - Financial Conduct Authority (regulated by)
+      - Prudential Regulation Authority (regulated by)
+    parent: AIB Group plc
+    cma9: true
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://openapi.aibgb.co.uk/open-banking/v2.2
+      documented: true
+      confirmedLive: true
+      auth: none (public Open Data)
+      note: >-
+        Open Data API v2.2. Confirmed HTTP 200 on personal-current-accounts,
+        business-current-accounts, and unsecured-sme-loans with media type
+        application/prs.openbanking.opendata.v2.2+json.
+    - protocol: REST
+      scheme: https
+      documented: true
+      confirmedLive: false
+      auth: FAPI OAuth2/OIDC + PSD2 SCA + mTLS + Dynamic Client Registration (OBIE/eIDAS certs)
+      note: >-
+        OBIE Read/Write APIs (AIS/PIS/CBPII/VRP) to Open Banking UK Spec v4.0.
+        Production base URL not published pre-onboarding; not fabricated.
+  endpointsConfirmed:
+    - GET https://openapi.aibgb.co.uk/open-banking/v2.2/personal-current-accounts (200)
+    - GET https://openapi.aibgb.co.uk/open-banking/v2.2/business-current-accounts (200)
+    - GET https://openapi.aibgb.co.uk/open-banking/v2.2/unsecured-sme-loans (200)
+  endpointsProbedNotServed:
+    - GET https://openapi.aibgb.co.uk/open-banking/v2.2/atms (400)
+    - GET https://openapi.aibgb.co.uk/open-banking/v2.2/branches (400)
+    - GET https://openapi.aibgb.co.uk/open-banking/v2.3/atms (404)
+  specProvenance:
+    openapiHarvested: true
+    path: openapi/aib-group-uk-open-data-openapi.json
+    source: https://raw.githubusercontent.com/OpenBankingUK/opendata-api-spec-compiled/master/opendata-swagger.json
+    kind: OBIE Open Data standard (shared spec)
+    note: >-
+      This is the SHARED OBIE Open Data Swagger 2.0 standard (info.title "Open
+      Data API", version v1.3, 6 paths), NOT an AIB-proprietary contract. AIB
+      Group (UK)'s live Open Data endpoints conform to this standard. No
+      bank-proprietary OpenAPI/Swagger is publicly downloadable without portal
+      onboarding for the Read/Write APIs.
+sources:
+  - url: https://developer.aibgb.co.uk/
+    type: DeveloperPortal
+    status: 200
+  - url: https://developer.aibgb.co.uk/apis
+    type: Documentation
+    status: 200
+    note: API catalogue - Open Data v2.2, Security, DCR v3.2, Credit Cards, FCA Service Metrics BCA, Accounts v4.0, Payments v4.0, VRP v4.0, Confirmation of Funds v4.0, Event Notification Subscription v4.0, Aggregated Event Polling v4.0.
+  - url: https://developer.aibgb.co.uk/open-data-v2-2-gb/apis
+    type: APIReference
+    status: 200
+  - url: https://developer.aibgb.co.uk/api-product-overview-GB
+    type: Documentation
+    status: 200
+    note: Confirms Accounts/Payments/Confirmation of Funds conform to Open Banking UK Spec v4.0 under an OAuth2 consent framework.
+  - url: https://developer.aibgb.co.uk/site-legal-notice-gb
+    type: TermsOfService
+    status: 200
+    note: Legal entity, NI018800, Belfast registered office, PRA/FCA regulation.
+  - url: https://openapi.aibgb.co.uk/open-banking/v2.2/personal-current-accounts
+    type: OpenData
+    status: 200
+    note: Live JSON, media type application/prs.openbanking.opendata.v2.2+json.
