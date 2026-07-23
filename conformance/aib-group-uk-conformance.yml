@@ -1,0 +1,59 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.aibgb.co.uk/apis
+note: >-
+  Standards conformance for AIB Group (UK) as a CMA9 bank under the UK Open
+  Banking order. Read/Write conformance is asserted from the OBIE standard the
+  portal publishes to; Open Data conformance is confirmed against the captured
+  live spec. FAPI/OAuth2/OIDC/mutual-TLS apply to the Read/Write family only.
+standards:
+  - id: obie-open-data-2.2
+    conforms: true
+    evidence: >-
+      Live Open Data API served as application/prs.openbanking.opendata.v2.2+json;
+      publishes PCA/BCA/SME/branch/ATM/CCC reference data per the OBIE Open Data
+      standard.
+  - id: obie-read-write-4.0
+    conforms: true
+    evidence: >-
+      Account Information (AIS), Payment Initiation (PIS), Confirmation of Funds
+      (CBPII), Variable Recurring Payments (VRP), and Event Notification APIs
+      published to OBIE Read/Write Data API v4.0 on the developer portal.
+  - id: obie-dcr-3.2
+    conforms: true
+    evidence: Dynamic Client Registration API v3.2 published on the developer portal.
+  - id: fapi-1-advanced
+    conforms: true
+    evidence: >-
+      Read/Write APIs FAPI-secured (Financial-grade API 1.0 Advanced) per the OBIE
+      security profile.
+  - id: oauth2
+    conforms: true
+    evidence: OAuth2 authorization_code and client_credentials grants for Read/Write consent.
+  - id: oidc
+    conforms: true
+    evidence: OpenID Connect identity layer over OAuth2 for Read/Write consent.
+  - id: mutual-tls
+    conforms: true
+    evidence: Mutual TLS with OBIE/eIDAS certificates on DCR and token endpoints.
+  - id: psd2-sca
+    conforms: true
+    evidence: PSD2 strong customer authentication enforced on customer-present flows.
+  - id: fca-service-metrics
+    conforms: true
+    evidence: >-
+      FCA Service Metrics (BCA) API publishes the service availability/performance
+      metrics AIB Group (UK) is required to report under FCA rules.
+  - id: rfc7234-http-caching
+    conforms: true
+    evidence: Open Data responses carry ETag, Cache-Control, and support conditional GET.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      Errors use the OBIE error model (Code/Id/Message/Errors[]), not
+      application/problem+json.
+compliance_program:
+  regulators: [Financial Conduct Authority (FCA), Prudential Regulation Authority (PRA)]
+  mandate: UK CMA Open Banking order (CMA9)
+  scheme: Open Banking Implementation Entity (OBIE) / Open Banking Limited
+  fca_service_metrics: https://developer.aibgb.co.uk/fca-service-metrics-bca-gb/apis

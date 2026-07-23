@@ -1,0 +1,65 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.aibgb.co.uk/apis
+note: >-
+  Cross-cutting request/response conventions for AIB Group (UK) Open Banking
+  APIs. The public Open Data API follows the OBIE Open Data v2.2 conventions;
+  the Read/Write family follows the OBIE Read/Write Data API v4.0 conventions
+  (x-fapi headers, x-idempotency-key, standard error model). Captured from the
+  developer portal and the OBIE standard, cross-referenced with the captured
+  Open Data OpenAPI.
+authentication:
+  style: FAPI OAuth2/OIDC + mutual TLS (Read/Write); none (Open Data)
+  ref: authentication/aib-group-uk-authentication.yml
+idempotency:
+  supported: true
+  scope: Read/Write Payment Initiation (PIS) and Variable Recurring Payments (VRP)
+  header: x-idempotency-key
+  max_length: 40
+  retention: >-
+    OBIE requires idempotent handling of payment set-up/submission requests so a
+    retried POST with the same x-idempotency-key and identical payload does not
+    create a duplicate payment; a reused key with a different payload is rejected.
+  standard: OBIE Read/Write Data API 4.0
+fapi_headers:
+  - name: x-fapi-auth-date
+    description: Time the customer last logged in (RFC 7231 date).
+  - name: x-fapi-customer-ip-address
+    description: Customer IP address when the request is customer-present.
+  - name: x-fapi-interaction-id
+    description: RFC 4122 UUID echoed back for end-to-end request tracing.
+  - name: x-jws-signature
+    description: JWS detached signature over the payload for message integrity (payments).
+request_tracing:
+  header: x-fapi-interaction-id
+  description: Client-supplied UUID echoed in the response for correlation.
+pagination:
+  style: link-based
+  description: >-
+    Read/Write list resources return a Links object (Self/First/Prev/Next/Last)
+    and a Meta object with TotalPages; page size is bank-controlled. The Open
+    Data API returns full collections with a Meta block (LastUpdated,
+    TotalResults, Agreement, Licence, TermsOfUse).
+conditional_requests:
+  supported: true
+  request_headers: [If-Modified-Since, If-None-Match]
+  response_headers: [Etag, Cache-Control, Last-Modified]
+  note: Open Data API supports ETag / If-None-Match conditional GETs.
+versioning:
+  style: uri-path
+  examples: ['open-banking/v2.2 (Open Data)', 'v4.0 (Read/Write)', 'v3.2 (DCR)']
+  ref: lifecycle/aib-group-uk-lifecycle.yml
+error_envelope:
+  shape: OBIE error model
+  fields: ['Code', 'Id', 'Message', 'Errors[].ErrorCode', 'Errors[].Message', 'Errors[].Path', 'Errors[].Url']
+  content_type_open_data: application/prs.openbanking.opendata.v2.2+json
+  ref: errors/aib-group-uk-problem-types.yml
+rate_limit_signaling:
+  status: 429
+  description: >-
+    Open Data API returns HTTP 429 ("You have requested this resource too often.
+    Slow down.") when the caller exceeds the polling rate. Read/Write APIs apply
+    OBIE polling/rate constraints (e.g. event polling cadence).
+security_headers:
+  observed: [Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options, Cache-Control]
+  source: openapi/aib-group-uk-open-data-openapi.json

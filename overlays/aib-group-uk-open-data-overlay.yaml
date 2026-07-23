@@ -1,0 +1,24 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for AIB Group (UK) Open Data API
+  version: 1.0.0
+extends: openapi/aib-group-uk-open-data-openapi.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: aib-group-uk
+      x-apievangelist-standard: OBIE Open Data v2.2
+      x-apievangelist-production-base-url: https://openapi.aibgb.co.uk/open-banking/v2.2
+      x-apievangelist-auth: none (public, unauthenticated)
+      x-apievangelist-conformance:
+        - obie-open-data-2.2
+        - fca-service-metrics
+      x-apievangelist-content-type: application/prs.openbanking.opendata.v2.2+json
+  - target: $.info
+    update:
+      x-apievangelist-links:
+        developer_portal: https://developer.aibgb.co.uk/
+        documentation: https://developer.aibgb.co.uk/open-data-v2-2-gb/apis
+        data_model: data-model/aib-group-uk-data-model.yml
+        conventions: conventions/aib-group-uk-conventions.yml
+        errors: errors/aib-group-uk-problem-types.yml

@@ -1,0 +1,65 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.aibgb.co.uk/apis
+note: >-
+  AIB Group (UK) implements the UK Open Banking (OBIE) security profile. The
+  public Open Data API (v2.2) is unauthenticated. The Read/Write family
+  (Account Information, Payment Initiation, Confirmation of Funds, Variable
+  Recurring Payments, Event Notifications) is FAPI-secured under OAuth2/OIDC
+  with PSD2 strong customer authentication (SCA). TPPs onboard via OBIE Dynamic
+  Client Registration (DCR v3.2) using OBIE/eIDAS certificates. Access tokens
+  are obtained via authorization_code (customer-present, AIS/PIS consent) and
+  client_credentials (client-present setup) grants. The live OpenAPI spec
+  captured in this repo is the unauthenticated Open Data API and declares no
+  securitySchemes; the auth model below is captured from the developer portal
+  and OBIE standard, not derived from that spec.
+summary:
+  types: [oauth2, openIdConnect, mutualTLS]
+  api_key_in: []
+  oauth2_flows: [authorizationCode, clientCredentials]
+  strong_customer_authentication: true
+  standard: FAPI 1.0 Advanced (Financial-grade API) / OBIE Security Profile
+schemes:
+  - name: OpenData
+    type: none
+    description: >-
+      Public, unauthenticated Open Data API (v2.2). No credentials required;
+      product reference data served over TLS.
+    applies_to: [aib-group-uk-open-data-api]
+  - name: OpenBankingOAuth2
+    type: oauth2
+    description: >-
+      OBIE FAPI-secured OAuth2 with OIDC. authorization_code (with PKCE / PAR /
+      request object, JARM) for customer consent flows (AIS, PIS, CBPII, VRP);
+      client_credentials for consent set-up. Access is granted through
+      developer-portal onboarding and sandbox before production.
+    flows:
+      - flow: authorizationCode
+        description: Customer-present consent authorization (AIS/PIS/VRP/CBPII).
+      - flow: clientCredentials
+        description: Client-present consent set-up and event subscription.
+    applies_to:
+      - aib-group-uk-account-information-api
+      - aib-group-uk-payment-initiation-api
+      - aib-group-uk-confirmation-of-funds-api
+      - aib-group-uk-variable-recurring-payments-api
+      - aib-group-uk-credit-cards-information-api
+      - aib-group-uk-event-notification-subscription-api
+      - aib-group-uk-aggregated-event-polling-api
+  - name: OpenIDConnect
+    type: openIdConnect
+    description: >-
+      OpenID Connect identity layer over OAuth2 for the Read/Write APIs; id_token
+      carries the consent and SCA assurance.
+  - name: MutualTLS
+    type: mutualTLS
+    description: >-
+      Mutual TLS with OBIE/eIDAS (QWAC/QSEAL) transport and signing certificates;
+      required for Dynamic Client Registration (DCR v3.2) and token endpoints.
+    applies_to: [aib-group-uk-dynamic-client-registration-api]
+onboarding:
+  model: self-serve developer portal + DCR
+  portal: https://developer.aibgb.co.uk/
+  dynamic_client_registration: https://developer.aibgb.co.uk/dynamic-client-registration-api-v3-2-gb/apis
+  certificates: OBIE / eIDAS (QWAC, QSEAL)
+  sandbox: true

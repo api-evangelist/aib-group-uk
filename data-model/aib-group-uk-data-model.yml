@@ -1,0 +1,56 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/aib-group-uk-open-data-openapi.json
+note: >-
+  Entity model derived from the live Open Data API (v2.2) collections. Each
+  endpoint returns a Meta block (LastUpdated, TotalResults, Agreement, Licence,
+  TermsOfUse) wrapping a Brand array; each Brand carries a BrandName and the
+  product/asset arrays below. The authenticated Read/Write family adds Account,
+  Balance, Transaction, Consent, and Payment entities not present in this spec.
+entities:
+  - name: Brand
+    description: A trading brand (e.g. Allied Irish Bank (GB)) grouping products and assets.
+    fields: [BrandName]
+  - name: Branch
+    endpoint: GET /branches
+    description: Physical branch location with services and accessibility.
+  - name: ATM
+    endpoint: GET /atms
+    description: ATM location, access, and supported services.
+  - name: PersonalCurrentAccount
+    endpoint: GET /personal-current-accounts
+    description: Personal current account product with features, rates, fees, and eligibility.
+  - name: BusinessCurrentAccount
+    endpoint: GET /business-current-accounts
+    description: Business current account product terms and eligibility.
+  - name: UnsecuredSMELoan
+    endpoint: GET /unsecured-sme-loans
+    description: Unsecured SME loan product with rates, fees, and eligibility.
+  - name: CommercialCreditCard
+    endpoint: GET /commercial-credit-cards
+    description: Commercial credit card product terms.
+relationships:
+  - from: Brand
+    to: Branch
+    kind: has_many
+    via: Brand[].Branch[]
+  - from: Brand
+    to: ATM
+    kind: has_many
+    via: Brand[].ATM[]
+  - from: Brand
+    to: PersonalCurrentAccount
+    kind: has_many
+    via: Brand[].PersonalCurrentAccount[]
+  - from: Brand
+    to: BusinessCurrentAccount
+    kind: has_many
+    via: Brand[].BusinessCurrentAccount[]
+  - from: Brand
+    to: UnsecuredSMELoan
+    kind: has_many
+    via: Brand[].UnsecuredSMELoan[]
+  - from: Brand
+    to: CommercialCreditCard
+    kind: has_many
+    via: Brand[].CommercialCreditCard[]

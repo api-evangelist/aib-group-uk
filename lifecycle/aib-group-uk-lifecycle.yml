@@ -1,0 +1,31 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.aibgb.co.uk/apis
+note: >-
+  Versioning and lifecycle for AIB Group (UK) Open Banking APIs. Versions follow
+  the OBIE release train; AIB Group (UK) tracks the OBIE standard version in the
+  URI path. No public status page or machine-readable Sunset/Deprecation policy
+  was found on the developer portal at the time of capture.
+versioning:
+  scheme: uri-path
+  standard_body: Open Banking Implementation Entity (OBIE) / Open Banking Limited
+  current:
+    open_data: v2.2
+    read_write: v4.0
+    dynamic_client_registration: v3.2
+  docs: https://developer.aibgb.co.uk/apis
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    Deprecation follows the OBIE standard release lifecycle (old standard
+    versions retired as the OBIE train advances); AIB Group (UK) publishes no
+    separate machine-readable deprecation policy or RFC 8594 Sunset header.
+sla:
+  url: https://developer.aibgb.co.uk/fca-service-metrics-bca-gb/apis
+  note: >-
+    Service availability and performance are reported via the FCA Service
+    Metrics (BCA) API rather than a commercial SLA.
+status_page: null
+status_page_note: No dedicated public API status page found on the developer portal.
+deprecated_operations: []

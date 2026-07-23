@@ -1,0 +1,13 @@
+generated: '2026-07-23'
+method: generated
+skills:
+  - file: aib-group-uk-open-data-discovery.md
+    name: Discover AIB Group (UK) branches, ATMs, and products via Open Data
+    api: openapi/aib-group-uk-open-data-openapi.json
+    operations:
+      - GET /branches
+      - GET /atms
+      - GET /personal-current-accounts
+      - GET /business-current-accounts
+      - GET /unsecured-sme-loans
+      - GET /commercial-credit-cards

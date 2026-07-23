@@ -211,6 +211,36 @@ apis:
   - type: APIReference
     url: https://developer.aibgb.co.uk/apis
 common:
+- type: AgenticAccess
+  url: agentic-access/aib-group-uk-agentic-access.yml
+- type: DomainSecurity
+  url: security/aib-group-uk-domain-security.yml
+- type: Authentication
+  url: authentication/aib-group-uk-authentication.yml
+- type: Conventions
+  url: conventions/aib-group-uk-conventions.yml
+- type: Idempotency
+  url: conventions/aib-group-uk-conventions.yml
+- type: Conformance
+  url: conformance/aib-group-uk-conformance.yml
+- type: ErrorCatalog
+  url: errors/aib-group-uk-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/aib-group-uk-lifecycle.yml
+- type: DataModel
+  url: data-model/aib-group-uk-data-model.yml
+- type: LLMsTxt
+  url: llms/aib-group-uk-llms.txt
+- type: Overlay
+  url: overlays/aib-group-uk-open-data-overlay.yaml
+- type: AgentSkill
+  url: skills/aib-group-uk-open-data-discovery.md
+- type: GettingStarted
+  url: https://developer.aibgb.co.uk/getting-started-gb
+- type: SignUp
+  url: https://developer.aibgb.co.uk/user/register
+- type: Blog
+  url: https://developer.aibgb.co.uk/blog
 - type: Website
   url: https://www.aibgb.co.uk/
 - type: DeveloperPortal

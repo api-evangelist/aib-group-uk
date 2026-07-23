@@ -1,0 +1,52 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/aib-group-uk-open-data-openapi.json
+format: obie-error-model
+note: >-
+  Derived from the response definitions of the live Open Data API spec, enriched
+  with the OBIE standard error model used by the Read/Write family. The Open
+  Data API returns plain status-coded errors; the Read/Write APIs return the
+  OBIE error envelope (Code, Id, Message, Errors[]).
+envelope:
+  fields:
+    - Code: high-level HTTP-aligned error code
+    - Id: unique interaction id for the error (correlates with x-fapi-interaction-id)
+    - Message: human-readable summary
+    - Errors: array of {ErrorCode, Message, Path, Url}
+  read_write_error_codes:
+    - UK.OBIE.Field.Invalid
+    - UK.OBIE.Field.Missing
+    - UK.OBIE.Field.Unexpected
+    - UK.OBIE.Header.Invalid
+    - UK.OBIE.Header.Missing
+    - UK.OBIE.Resource.NotFound
+    - UK.OBIE.Resource.InvalidConsentStatus
+    - UK.OBIE.Resource.InvalidFormat
+    - UK.OBIE.Rules.FailsControlParameters
+    - UK.OBIE.Signature.Invalid
+    - UK.OBIE.Signature.Missing
+    - UK.OBIE.Unsupported.AccountIdentifier
+    - UK.OBIE.UnexpectedError
+problems:
+  - status: 400
+    title: Bad request
+    description: You have sent a request which could not be understood.
+    source_operation: openapi/aib-group-uk-open-data-openapi.json#GET/branches
+  - status: 408
+    title: Request timeout
+    description: The client did not produce a request within the time the server was prepared to wait.
+    source_operation: openapi/aib-group-uk-open-data-openapi.json#GET/branches
+  - status: 429
+    title: Too many requests
+    description: You have requested this resource too often. Slow down.
+    remediation: Reduce polling frequency; honour rate limits.
+    source_operation: openapi/aib-group-uk-open-data-openapi.json#GET/branches
+  - status: 500
+    title: Internal server error
+    description: An error occurred on the server. No further information is available.
+    source_operation: openapi/aib-group-uk-open-data-openapi.json#GET/branches
+  - status: 503
+    title: Service unavailable
+    description: The service is temporarily unavailable.
+    remediation: Retry after a delay; check status of the service.
+    source_operation: openapi/aib-group-uk-open-data-openapi.json#GET/branches
