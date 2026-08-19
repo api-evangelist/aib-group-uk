@@ -44,7 +44,7 @@ tags:
 - Northern Ireland
 created: '2026-07-23'
 modified: '2026-07-23'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: aib-group-uk:aib-group-uk-open-data-api
   name: AIB Group (UK) Open Data API
