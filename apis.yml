@@ -31,6 +31,18 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Open Banking
+- PSD2
+- OBIE
+- CMA9
+- United Kingdom
+- Payments
+- Account Information
+- Confirmation of Funds
+- Northern Ireland
+tags_raw:
 - Financial Services
 - Banking
 - Open Banking
@@ -78,6 +90,10 @@ apis:
   tags:
   - Account Information
   - AIS
+  - Read/Write
+  tags_raw:
+  - Account Information
+  - AIS
   - Read Write
   properties:
   - type: Documentation
@@ -93,6 +109,10 @@ apis:
   humanURL: https://developer.aibgb.co.uk/payments-initiation-v4-0-gb/apis
   baseURL: ''
   tags:
+  - Payment Initiation
+  - PIS
+  - Read/Write
+  tags_raw:
   - Payment Initiation
   - PIS
   - Read Write
@@ -111,6 +131,10 @@ apis:
   tags:
   - Confirmation of Funds
   - CBPII
+  - Read/Write
+  tags_raw:
+  - Confirmation of Funds
+  - CBPII
   - Read Write
   properties:
   - type: Documentation
@@ -126,6 +150,10 @@ apis:
   humanURL: https://developer.aibgb.co.uk/variable-recurring-payments-v4-0-gb/apis
   baseURL: ''
   tags:
+  - Variable Recurring Payments
+  - VRP
+  - Read/Write
+  tags_raw:
   - Variable Recurring Payments
   - VRP
   - Read Write
@@ -173,6 +201,9 @@ apis:
   baseURL: ''
   tags:
   - Event Notifications
+  - Read/Write
+  tags_raw:
+  - Event Notifications
   - Read Write
   properties:
   - type: Documentation
@@ -187,6 +218,9 @@ apis:
   humanURL: https://developer.aibgb.co.uk/aggregated-event-polling-api-v4-0-gb/apis
   baseURL: ''
   tags:
+  - Event Polling
+  - Read/Write
+  tags_raw:
   - Event Polling
   - Read Write
   properties:
