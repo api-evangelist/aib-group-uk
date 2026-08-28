@@ -17,6 +17,18 @@ description: AIB Group (UK) p.l.c. is a UK bank incorporated in Northern Ireland
   and Variable Recurring Payments to OBIE v4.0) accessed under OAuth2/OIDC consent
   with PSD2 strong customer authentication, dynamic client registration, and a
   sandbox for onboarding and testing before production.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
