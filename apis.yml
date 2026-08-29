@@ -322,6 +322,9 @@ apis:
   - type: APIReference
     url: https://developer.aibgb.co.uk/apis
 common:
+- type: CapabilityMap
+  url: capabilities/aib-group-uk-capability-edges.yml
+  name: AIB Group (UK) Business Capability Map
 - type: AgenticAccess
   url: agentic-access/aib-group-uk-agentic-access.yml
 - type: DomainSecurity

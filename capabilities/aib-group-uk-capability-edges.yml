@@ -1,0 +1,70 @@
+slug: aib-group-uk
+provider: AIB Group (UK)
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Banking & Capital Markets
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 6
+edges:
+- tag: ATM
+  spec_file: aib-group-uk-atm-api-openapi.yml
+  capability_id: BC-1300.50
+  capability_id_l1: BC-1300
+  capability_name: Banking Channels Management
+  confidence: 0.8
+  evidence: GET /atms — 'Open Data ATM API', 'Latest Swagger specification for OpenData'
+  reason: UK Open Data ATM location listing published by a bank exposes ATM channel/network information,
+    which falls under Banking Channels Management (branch, ATM, online).
+- tag: Branch
+  spec_file: aib-group-uk-branch-api-openapi.yml
+  capability_id: BC-1300.50
+  capability_id_l1: BC-1300
+  capability_name: Banking Channels Management
+  confidence: 0.8
+  evidence: GET /branches — "Open Data Branch API"
+  reason: Publishes branch locations/details, i.e. physical channel network information, matching Banking
+    Channels Management (branch, ATM, online...).
+- tag: BCA
+  spec_file: aib-group-uk-bca-api-openapi.yml
+  capability_id: BC-1310.10
+  capability_id_l1: BC-1310
+  capability_name: Product Catalogue Management
+  confidence: 0.75
+  evidence: GET /business-current-accounts — "Open Data BCA API", "Latest Swagger specification for OpenData"
+  reason: UK Open Data product-reference endpoint publishing the bank's business current account product
+    range (features, rates, eligibility). This is the banking product catalogue being exposed, not account
+    servicing.
+- tag: PCA
+  spec_file: aib-group-uk-pca-api-openapi.yml
+  capability_id: BC-1310.10
+  capability_id_l1: BC-1310
+  capability_name: Product Catalogue Management
+  confidence: 0.75
+  evidence: GET /personal-current-accounts — "Open Data PCA API"
+  reason: Open Data endpoint publishing personal current account product descriptions and terms — banking
+    product catalogue publication.
+- tag: CCC
+  spec_file: aib-group-uk-ccc-api-openapi.yml
+  capability_id: BC-1310.10
+  capability_id_l1: BC-1310
+  capability_name: Product Catalogue Management
+  confidence: 0.7
+  evidence: GET /commercial-credit-cards — "Open Data CCC API"
+  reason: Open Data product-information endpoint listing commercial credit card products and their terms;
+    a product catalogue surface rather than card issuance or transaction processing.
+- tag: SME
+  spec_file: aib-group-uk-sme-api-openapi.yml
+  capability_id: BC-1310.10
+  capability_id_l1: BC-1310
+  capability_name: Product Catalogue Management
+  confidence: 0.7
+  evidence: GET /unsecured-sme-loans — "Open Data SME API"
+  reason: Publishes the bank's unsecured SME loan product offerings as reference data; product catalogue
+    rather than origination or servicing operations.
