@@ -81,7 +81,7 @@ apis:
   tags:
   - Account Information
   - AIS
-  - Read Write
+  - Read/Write
   tags_raw:
   - Account Information
   - AIS
@@ -102,7 +102,7 @@ apis:
   tags:
   - Payment Initiation
   - PIS
-  - Read Write
+  - Read/Write
   tags_raw:
   - Payment Initiation
   - PIS
@@ -123,7 +123,7 @@ apis:
   tags:
   - Confirmation of Funds
   - CBPII
-  - Read Write
+  - Read/Write
   tags_raw:
   - Confirmation of Funds
   - CBPII
@@ -144,7 +144,7 @@ apis:
   tags:
   - Variable Recurring Payments
   - VRP
-  - Read Write
+  - Read/Write
   tags_raw:
   - Variable Recurring Payments
   - VRP
@@ -194,7 +194,7 @@ apis:
   baseURL: ''
   tags:
   - Event Notifications
-  - Read Write
+  - Read/Write
   tags_raw:
   - Event Notifications
   - Read Write
@@ -212,7 +212,7 @@ apis:
   baseURL: ''
   tags:
   - Event Polling
-  - Read Write
+  - Read/Write
   tags_raw:
   - Event Polling
   - Read Write
