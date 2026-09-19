@@ -101,7 +101,7 @@ apis:
   baseURL: ''
   tags:
   - Payment Initiation
-  - PIS
+  - PI
   - Read/Write
   tags_raw:
   - Payment Initiation
