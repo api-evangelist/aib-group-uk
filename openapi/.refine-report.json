@@ -1,0 +1,30 @@
+{
+  "provider": "aib-group-uk",
+  "sources": [
+    "_original/aib-group-uk-open-data-openapi.json"
+  ],
+  "outputs": [
+    "aib-group-uk-atm-api-openapi.yml",
+    "aib-group-uk-bca-api-openapi.yml",
+    "aib-group-uk-branch-api-openapi.yml",
+    "aib-group-uk-ccc-api-openapi.yml",
+    "aib-group-uk-pca-api-openapi.yml",
+    "aib-group-uk-sme-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "aib-group-uk-open-data-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "aib-group-uk-atm-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aib-group-uk-bca-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aib-group-uk-branch-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aib-group-uk-ccc-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aib-group-uk-pca-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aib-group-uk-sme-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}
