@@ -43,7 +43,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2
@@ -66,6 +66,7 @@ tags_raw:
 - Account Information
 - Confirmation of Funds
 - Northern Ireland
+- Financial-Services
 created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
@@ -313,6 +314,8 @@ apis:
   humanURL: https://developer.aibgb.co.uk/open-data-v2-2-gb/apis
   baseURL: https://openapi.aibgb.co.uk/open-banking/v2.2
   tags:
+  - Small Business
+  tags_raw:
   - SME
   properties:
   - type: OpenAPI
