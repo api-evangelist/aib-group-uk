@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/aib-group-uk/integrations
+- https://n8n.io/integrations/aib-group-uk/
+- https://composio.dev/toolkits/aib-group-uk
+- https://monid.ai/tools/aib-group-uk
+checked:
+- https://composio.dev/toolkits/aib-group-uk
+- https://monid.ai/tools/aib-group-uk
+- https://n8n.io/integrations/aib-group-uk/
+- https://zapier.com/apps/aib-group-uk/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
