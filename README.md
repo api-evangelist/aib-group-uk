@@ -1,4 +1,4 @@
-# AIB Group (UK) (aib-group-uk)
+# AIB Group (UK)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,110 +64,126 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AIB Group (UK) p.l.c. is a UK bank incorporated in Northern Ireland (registered number NI018800, registered office 92 Ann Street, Belfast BT1 3HH), authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the PRA. It trades as Allied Irish Bank (GB) and Allied Irish Bank (GB) Savings Direct and is the UK banking subsidiary of the Irish AIB Group plc. As one of the CMA9 banks mandated under the UK Competition and Markets Authority's Open Banking order, it runs a public developer portal publishing UK Open Banking APIs conformant to the Open Banking Implementation Entity (OBIE) standards.
+AIB Group (UK) p.l.c. is a UK bank incorporated in Northern Ireland (registered number NI018800, registered office 92 Ann Street, Belfast BT1 3HH), authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. It trades as Allied Irish Bank (GB) and Allied Irish Bank (GB) Savings Direct, and is the UK banking subsidiary of the Irish AIB Group plc. As one of the CMA9 banks mandated under the UK Competition and Markets Authority's Open Banking order, it runs a public developer portal publishing UK Open Banking APIs conformant to the Open Banking Implementation Entity (OBIE) standards - a public, unauthenticated Open Data API (v2.2) exposing personal current account, business current account, and unsecured SME loan product reference data, alongside the FAPI-secured Read/Write family (Account and Transaction Information, Payment Initiation, Confirmation of Funds, and Variable Recurring Payments to OBIE v4.0) accessed under OAuth2/OIDC consent with PSD2 strong customer authentication, dynamic client registration, and a sandbox for onboarding and testing before production.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/aib-group-uk/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/aib-group-uk/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Open Banking · PSD2 · OBIE · CMA9 · United Kingdom · Payments · Account Information · Confirmation of Funds · Northern Ireland
 
-## Tags
+## AIB Group (UK) on APIs.io
 
-- Financial Services
-- Banking
-- Open Banking
-- PSD2
-- OBIE
-- CMA9
-- United Kingdom
-- Payments
-- Account Information
-- Confirmation of Funds
-- Northern Ireland
+Everything profiled for AIB Group (UK) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aib-group-uk/](https://apis.io/providers/aib-group-uk/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (15)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+- [AIB Group (UK) Accounts Information API](https://apis.io/apis/aib-group-uk/aib-group-uk-account-information-api/) — OBIE Read/Write Account and Transaction Information API (AIS) v4.0 - account details, balances, transactions, standing orders, direct debits, and…
+- [AIB Group (UK) Payments Initiation API](https://apis.io/apis/aib-group-uk/aib-group-uk-payment-initiation-api/) — OBIE Read/Write Payment Initiation API (PIS) v4.0 - domestic and scheduled payment initiation through a set-up, submit-after-consent, and status-retrieval…
+- [AIB Group (UK) Confirmation of Funds API](https://apis.io/apis/aib-group-uk/aib-group-uk-confirmation-of-funds-api/) — OBIE Read/Write Confirmation of Funds API (CBPII) v4.0 - returns a yes/no confirmation of whether funds are available for a specified payment. FAPI-secured…
+- [AIB Group (UK) Variable Recurring Payments API](https://apis.io/apis/aib-group-uk/aib-group-uk-variable-recurring-payments-api/) — OBIE Read/Write Variable Recurring Payments (VRP) API v4.0, including sweeping, letting authorised TPPs initiate a series of payments under a single…
+- [AIB Group (UK) Dynamic Client Registration API](https://apis.io/apis/aib-group-uk/aib-group-uk-dynamic-client-registration-api/) — OBIE Dynamic Client Registration API v3.2, allowing authorised third-party providers to programmatically register client credentials using OBIE/eIDAS…
+- [AIB Group (UK) Credit Cards Information API](https://apis.io/apis/aib-group-uk/aib-group-uk-credit-cards-information-api/) — Credit Cards Information API providing access to credit card account information under the Open Banking consent model.
+- [AIB Group (UK) Event Notification Subscription API](https://apis.io/apis/aib-group-uk/aib-group-uk-event-notification-subscription-api/) — OBIE Event Notification Subscription API v4.0, letting TPPs manage subscriptions to real-time event notifications (aggregated polling / callbacks) for the…
+- [AIB Group (UK) Aggregated Event Polling API](https://apis.io/apis/aib-group-uk/aib-group-uk-aggregated-event-polling-api/) — OBIE Aggregated Event Polling API v4.0, allowing TPPs to poll for aggregated event notifications relating to Account Information and Payment consents.
+- [AIB Group (UK) FCA Service Metrics (BCA) API](https://apis.io/apis/aib-group-uk/aib-group-uk-fca-service-metrics-bca-api/) — FCA Service Metrics API for Business Current Accounts (BCA), publishing the service availability and performance metrics AIB Group (UK) is required to…
+- [AIB Group (UK) ATM API](https://apis.io/apis/aib-group-uk/aib-group-uk-atm-api/) — Endpoint for getting ATM data
+- [AIB Group (UK) BCA API](https://apis.io/apis/aib-group-uk/aib-group-uk-bca-api/) — Endpoint for getting Business Current Account data
+- [AIB Group (UK) Branch API](https://apis.io/apis/aib-group-uk/aib-group-uk-branch-api/) — Endpoint for getting Branch data
+- [AIB Group (UK) CCC API](https://apis.io/apis/aib-group-uk/aib-group-uk-ccc-api/) — Endpoint for getting Commercial Credit Card data
+- [AIB Group (UK) PCA API](https://apis.io/apis/aib-group-uk/aib-group-uk-pca-api/) — Endpoint for getting Personal Current Account data
+- [AIB Group (UK) SME API](https://apis.io/apis/aib-group-uk/aib-group-uk-sme-api/) — Endpoint for getting Unsecured SME Loan data
 
-## APIs
+### Published properties
 
-### AIB Group (UK) Open Data API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Public, unauthenticated Open Banking Open Data API (v2.2) publishing Allied Irish Bank (GB) product reference data - personal current accounts, business current accounts, and unsecured SME loans - conformant to the OBIE Open Data standard. Confirmed live (HTTP 200, `application/prs.openbanking.opendata.v2.2+json`).
+#### Agentic access (1)
 
-- **Human URL:** [https://developer.aibgb.co.uk/open-data-v2-2-gb/apis](https://developer.aibgb.co.uk/open-data-v2-2-gb/apis)
-- **Base URL:** `https://openapi.aibgb.co.uk/open-banking/v2.2`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Properties
+- [Aib Group Uk Agentic Access](https://apis.io/agentic-access/aib-group-uk/aib-group-uk-agentic-access/)
 
-- [OpenAPI](openapi/aib-group-uk-open-data-openapi.json) — OBIE Open Data standard (shared spec, not an AIB-proprietary contract)
-- [Documentation](https://developer.aibgb.co.uk/open-data-v2-2-gb/apis)
-- [API Reference](https://developer.aibgb.co.uk/apis)
+#### Collections (1)
 
-### AIB Group (UK) Accounts Information API
+Postman and Open Collection request collections.
 
-OBIE Read/Write Account and Transaction Information API (AIS) v4.0 - account details, balances, transactions, standing orders, direct debits, and statements. FAPI-secured via OAuth2/OIDC consent with PSD2 strong customer authentication.
+- [Open Data API](https://apis.io/collections/aib-group-uk/open-aib-group-uk-open-data/)
 
-- **Human URL:** [https://developer.aibgb.co.uk/accounts-information-v4-0-gb/apis](https://developer.aibgb.co.uk/accounts-information-v4-0-gb/apis)
+#### Overlays (1)
 
-### AIB Group (UK) Payments Initiation API
+OpenAPI overlays, including conversational phrasing for each operation.
 
-OBIE Read/Write Payment Initiation API (PIS) v4.0 - domestic and scheduled payment initiation. FAPI-secured via OAuth2/OIDC with PSD2 strong customer authentication.
+- [Aib Group Uk Open Data Overlay](https://apis.io/overlays/aib-group-uk/aib-group-uk-open-data-overlay/)
 
-- **Human URL:** [https://developer.aibgb.co.uk/payments-initiation-v4-0-gb/apis](https://developer.aibgb.co.uk/payments-initiation-v4-0-gb/apis)
+#### Security (2)
 
-### AIB Group (UK) Confirmation of Funds API
+Authentication, trust centre, and vulnerability disclosure.
 
-OBIE Read/Write Confirmation of Funds API (CBPII) v4.0 - yes/no confirmation of fund availability for a specified payment. FAPI-secured via OAuth2/OIDC with PSD2 strong customer authentication.
+- [Aib Group Uk Authentication](https://apis.io/security/aib-group-uk/aib-group-uk-authentication/)
+- [Aib Group Uk Domain Security](https://apis.io/security/aib-group-uk/aib-group-uk-domain-security/)
 
-- **Human URL:** [https://developer.aibgb.co.uk/confirmation-funds-v4-0-gb/apis](https://developer.aibgb.co.uk/confirmation-funds-v4-0-gb/apis)
+## Where to find this API
 
-### AIB Group (UK) Variable Recurring Payments API
-
-OBIE Read/Write Variable Recurring Payments (VRP) API v4.0, including sweeping. FAPI-secured via OAuth2/OIDC with PSD2 strong customer authentication.
-
-- **Human URL:** [https://developer.aibgb.co.uk/variable-recurring-payments-v4-0-gb/apis](https://developer.aibgb.co.uk/variable-recurring-payments-v4-0-gb/apis)
-
-### AIB Group (UK) Dynamic Client Registration API
-
-OBIE Dynamic Client Registration API v3.2 - programmatic client registration using OBIE/eIDAS certificates.
-
-- **Human URL:** [https://developer.aibgb.co.uk/dynamic-client-registration-api-v3-2-gb/apis](https://developer.aibgb.co.uk/dynamic-client-registration-api-v3-2-gb/apis)
-
-### AIB Group (UK) Credit Cards Information API
-
-Credit Cards Information API providing access to credit card account information under the Open Banking consent model.
-
-- **Human URL:** [https://developer.aibgb.co.uk/credit-cards-information-gb/apis](https://developer.aibgb.co.uk/credit-cards-information-gb/apis)
-
-### AIB Group (UK) Event Notification Subscription API
-
-OBIE Event Notification Subscription API v4.0 for managing subscriptions to Read/Write event notifications.
-
-- **Human URL:** [https://developer.aibgb.co.uk/event-notification-subscription-api-v4-0-gb/apis](https://developer.aibgb.co.uk/event-notification-subscription-api-v4-0-gb/apis)
-
-### AIB Group (UK) Aggregated Event Polling API
-
-OBIE Aggregated Event Polling API v4.0 for polling aggregated event notifications.
-
-- **Human URL:** [https://developer.aibgb.co.uk/aggregated-event-polling-api-v4-0-gb/apis](https://developer.aibgb.co.uk/aggregated-event-polling-api-v4-0-gb/apis)
-
-### AIB Group (UK) FCA Service Metrics (BCA) API
-
-FCA Service Metrics API for Business Current Accounts, publishing FCA-required availability and performance metrics.
-
-- **Human URL:** [https://developer.aibgb.co.uk/fca-service-metrics-bca-gb/apis](https://developer.aibgb.co.uk/fca-service-metrics-bca-gb/apis)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.aibgb.co.uk/)
-- [Developer Portal](https://developer.aibgb.co.uk/)
 - [Documentation](https://developer.aibgb.co.uk/apis)
+- [Getting started](https://developer.aibgb.co.uk/getting-started-gb)
+- [Sign up](https://developer.aibgb.co.uk/user/register)
 - [Support](https://developer.aibgb.co.uk/faq-page)
-- [Terms of Service](https://developer.aibgb.co.uk/site-legal-notice-gb)
-- [Privacy Policy](https://developer.aibgb.co.uk/developer-portal-privacy-statement-GB)
+- [Blog](https://developer.aibgb.co.uk/blog)
 - [Compliance](https://developer.aibgb.co.uk/fca-service-metrics-bca-gb/apis)
-- [LinkedIn](https://www.linkedin.com/company/aib)
+- [Terms of service](https://developer.aibgb.co.uk/site-legal-notice-gb)
+- [Privacy policy](https://developer.aibgb.co.uk/developer-portal-privacy-statement-GB)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 40.6** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 35.5 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 58.9 |
+| Access clarity | 42.1 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 33.9** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aib-group-uk/](https://apis.io/providers/aib-group-uk/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AIB Group (UK): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aib-group-uk/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
