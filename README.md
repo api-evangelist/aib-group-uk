@@ -98,7 +98,7 @@ Each property below is a page on APIs.io carrying the machine-readable artifact 
 
 Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Aib Group Uk Agentic Access](https://apis.io/agentic-access/aib-group-uk/aib-group-uk-agentic-access/)
+- [AIB Group (UK) Agentic Access](https://apis.io/agentic-access/aib-group-uk/aib-group-uk-agentic-access/)
 
 #### Collections (1)
 
@@ -110,14 +110,20 @@ Postman and Open Collection request collections.
 
 OpenAPI overlays, including conversational phrasing for each operation.
 
-- [Aib Group Uk Open Data Overlay](https://apis.io/overlays/aib-group-uk/aib-group-uk-open-data-overlay/)
+- [AIB Group (UK) Open Data Overlay](https://apis.io/overlays/aib-group-uk/aib-group-uk-open-data-overlay/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [AIB Group (UK) API Rules](https://apis.io/rules/aib-group-uk/aib-group-uk-rules/)
 
 #### Security (2)
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Aib Group Uk Authentication](https://apis.io/security/aib-group-uk/aib-group-uk-authentication/)
-- [Aib Group Uk Domain Security](https://apis.io/security/aib-group-uk/aib-group-uk-domain-security/)
+- [AIB Group (UK) Authentication](https://apis.io/security/aib-group-uk/aib-group-uk-authentication/)
+- [AIB Group (UK) Domain Security](https://apis.io/security/aib-group-uk/aib-group-uk-domain-security/)
 
 ## Where to find this API
 
@@ -135,18 +141,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 40.6** — developing · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 42.5** — developing · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 73.2 |
 | Contract quality | 35.5 |
-| Contract governance | 18.2 |
+| Contract governance | 31.8 |
 | Operational transparency | 0.0 |
 | Developer ergonomics | 58.9 |
-| Access clarity | 42.1 |
+| Access clarity | 46.8 |
 
-**Agent readiness 22.9** — agent-aware
+**Agent readiness 22.3** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -171,8 +177,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | — |
 | Operation Distinctiveness | distinct |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 33.9** — Banking & Open Finance
+**Regulatory alignment 29.1** — Banking & Open Finance
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aib-group-uk/](https://apis.io/providers/aib-group-uk/).
 
